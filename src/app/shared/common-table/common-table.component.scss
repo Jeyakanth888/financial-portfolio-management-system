@@ -1,0 +1,28 @@
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .dot.active {
+    background-color: blue;
+  }
+
+  .dot.high {
+    background-color: green;
+  }
+
+  .dot.low {
+    background-color: red;
+  }
+
+  .dot.medium {
+    background-color: orange;
+  }
+  
+  .stock-icon {
+     width: 30px;
+     height: 30px;
+  }

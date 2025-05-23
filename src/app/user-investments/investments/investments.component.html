@@ -1,0 +1,11 @@
+<div class="main-content row">
+    <h4 class="col-sm-12 col-md-9"> Investment Details </h4>
+    <button type="button" class="btn btn-primary col-sm-12 col-md-3 pull-right add-btn" (click)=onclickAddInvestments()>Add Investments</button>
+    <div class="tables col-sm-12 col-md-6 table-left">
+        <app-common-table [tableData]=userInvestmentDetails [tableHeader]=userInvestmentHeader></app-common-table>
+    </div>
+    <div class="tables col-sm-12 col-md-6 table-right">
+        <app-common-table [tableData]=userStatusDetails [tableHeader]=userStatusHeader
+            [tableType]="'status'"></app-common-table>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button type="button" class="nav-link active" *ngFor="let tab of tabLists" data-bs-toggle="tab"
+            [ngClass]="{'active' : currentActiveTab===tab.title }" type="button" role="tab" aria-controls="tab.title"
+            aria-selected="true" (click)=onclickTab(tab)>{{tab.title}}</button>
+    </div>
+</nav>

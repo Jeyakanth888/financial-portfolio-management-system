@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+body, h1 {
+    padding:0px;
+    margin:0px;
+}
+.container-fluid {
+    padding:0px;
+    margin:0px;
+}
+
+.main-content {
+    padding:10px;
+    margin:50px 0px;
+}
+

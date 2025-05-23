@@ -1,0 +1,18 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col" *ngFor="let header of  tableHeader">{{header.text}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of tableData; let i = index;">
+            <td *ngFor="let header of  tableHeader">
+                <span *ngIf=" (header.id !== 'status' && header.id !== 'trend')"> {{data[header.id]}} </span>
+                <span class="dot" [ngClass]=data[header.id]
+                    *ngIf="tableType ==='status' && (header.id === 'status')"></span>
+                <span class="icon" [ngClass]=data[header.id] *ngIf="tableType ==='status' && (header.id === 'trend')">
+                    <img class="stock-icon" src="/assets/images/stock-market.png" /></span>
+            </td>
+        </tr>
+    </tbody>
+</table>

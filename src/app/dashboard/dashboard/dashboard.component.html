@@ -1,0 +1,33 @@
+<div class="main-content">
+    <div class="row">
+        @for (item of userOverViewData; track item.content) {
+        <app-card-tile [cardInformation]=item class="col-md-2 col-sm-4"></app-card-tile>
+        }
+    </div>
+    <div class="row charts-row">
+        <div class="card col-md-6 col-sm-12 card-chart-1">
+            <div class="card-header">
+                Investment Analysis
+            </div>
+            <div class="card-block">
+                <app-bar-chart [barData]=barChartData
+                    [title]=barChartTitle></app-bar-chart>
+            </div>
+        </div>
+        <div class="card col-md-6 col-sm-12 card-chart-2">
+            <div class="card-header">
+                Investment Progress Chart
+            </div>
+            <div class="card-block">
+                <div class="card-text">
+                    <div class="datapoint-info">
+                        {{ currentDataPoint ? (currentDataPoint?.x + ' => ' + currentDataPoint?.y) : '' }}
+                    </div>
+                    <!-- <app-sparkline-chart class="line-chart" [data]=sparklineData
+                        (dataPointHover)="onDataPointHovered($event)"></app-sparkline-chart> -->
+                    <app-pie-chart [enablePolylines]=true [isPercentage]=true [pieData]=pieChartData></app-pie-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

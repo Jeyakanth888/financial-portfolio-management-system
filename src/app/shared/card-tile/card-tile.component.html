@@ -1,0 +1,10 @@
+<div class="card">
+    <div class="card-header text-center">
+        <h5>{{cardInformation?.title | uppercase }}</h5>
+    </div>
+    <div class="card-body">
+      <p class="card-text text-center" *ngIf="cardInformation.type === 'amount'">{{cardInformation?.content | currency:'INR':true  }}</p>
+      <p class="card-text text-center" *ngIf="cardInformation.type === 'percentage'">{{cardInformation?.content }} %</p>
+      <p class="card-text text-center" *ngIf="cardInformation.type === 'count'">{{cardInformation?.content }} </p>
+    </div>
+  </div>

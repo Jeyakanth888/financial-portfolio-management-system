@@ -1,0 +1,34 @@
+:host {
+    div.svgWrapper {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  
+    svg {
+      width: 100%;
+      height: 100%;
+  
+      g.g-line path {
+        fill: none;
+        stroke: lightskyblue;
+        stroke-width: 1px;
+      }
+  
+      g.g-circles {
+        fill: lightblue;
+  
+        g.g-circles-wrap {
+          pointer-events: all;
+  
+          .circle-outer {
+            fill: none;
+          }
+  
+          .circle:hover {
+            fill: tomato;
+          }
+        }
+      }
+    }
+  }
